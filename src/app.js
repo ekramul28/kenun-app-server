@@ -4,8 +4,11 @@ const connectDB = require('./db/connectDB');
 const globalErrorHandler = require('./utils/globalErrorHandler');
 const app = express();
 const port = process.env.PORT || 5000;
+const divisionRoutes = require('./routes/v1/division')
 
 applyMiddleWares(app)
+
+app.use(divisionRoutes)
 
 
 
